@@ -1,0 +1,177 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  height: 100vh;
+  width: 114rem;
+  background-color: #ffeeee;
+}
+
+.card-container {
+  height: 45rem;
+  width: 60rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+/*********************/
+/* Image Section */
+/*********************/
+
+.card-img {
+  background-image: url(/images/image-product-desktop.jpg);
+  background-size: cover;
+  height: 45rem;
+}
+
+/*********************/
+/* Card-info Section */
+/*********************/
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3rem 2rem 2rem 0;
+}
+
+.perfume {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #7e8294;
+  letter-spacing: 0.8rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Fraunces", sans-serif;
+  color: #1c232b;
+  width: 78%;
+}
+
+.text {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #7e8294;
+  line-height: 1.8;
+  width: 90%;
+}
+
+.price {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.price-one {
+  font-size: 2.4rem;
+  color: #3c8067;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+}
+
+.price-two {
+  font-size: 1.5rem;
+  color: #7e8294;
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #3c8067;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1.2rem;
+}
+
+button:hover {
+  background-color: #0d5e40;
+}
+
+.icon {
+  stroke: #fff;
+}
+
+/*********************/
+/* Mobile View (Below 375px) */
+/*********************/
+@media (max-width: 24em) {
+
+  body {
+    width: 37.5rem;
+    /* height: 100vh; */
+  }
+
+  .card-container {
+    overflow: visible;
+    width: 35rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .card-img {
+    height: 25rem;
+  }
+
+  .card-img {
+    background-image: url(/images/image-product-mobile.jpg);
+  }
+
+  .info {
+    gap: 1.6rem;
+    padding-left: 3.6rem;
+  }
+
+  h1 {
+    width: 99%;
+    font-size: 3rem;
+  }
+
+  .text {
+    width: 99%;
+    line-height: 1.7;
+  }
+  button {
+    width: 95%;
+  }
+}
